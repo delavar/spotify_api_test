@@ -39,9 +39,15 @@ dependencies {
 
     implementation appDependencies.rxJava
 
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitGson
+    implementation appDependencies.retrofitRx
+
     implementation appDependencies.material
 
     implementation appDependencies.spotifyAuth
+
+    implementation appDependencies.prefKtx
 
     //Lifecycle
     implementation appDependencies.archLifeCycle
