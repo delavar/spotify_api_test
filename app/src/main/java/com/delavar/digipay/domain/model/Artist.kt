@@ -15,6 +15,8 @@ data class Artist(
     @SerializedName("uri") val uri: String
 ) {
     fun getThumbImage(): String? {
+        if (images?.isEmpty() ?: true)
+            return null
         return images?.last()?.url
     }
 }

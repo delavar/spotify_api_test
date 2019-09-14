@@ -9,4 +9,5 @@
     <string name="response_server_error">Server Error</string>
     <string name="response_timeout_error">Timeout Error</string>
     <string name="response_unknown_error">Unknown Error</string>
+    <string name="response_badrequest_error">Bad request Error</string>
 </resources>

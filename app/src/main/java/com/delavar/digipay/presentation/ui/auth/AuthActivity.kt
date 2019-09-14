@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -63,6 +64,8 @@ class AuthActivity : AppCompatActivity() {
             val response = AuthenticationClient.getResponse(resultCode, data)
             when(response.type){
                 TOKEN -> {
+                    Log.d("token", "onActivityResult: ${response.accessToken}")
+
                     pref[PrefSource.KEY_TOKEN] = response.accessToken
                     MainActivity.start(this)
                     finish()

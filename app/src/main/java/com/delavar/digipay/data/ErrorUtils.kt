@@ -69,13 +69,16 @@ class ErrorUtils(
      */
     private fun getHttpError(body: ResponseBody?): ErrorModel {
         return try {
-
-            val response = gson.fromJson(body.toString(), ErrorResponse::class.java)
+            val errorString = body?.string()
+            val response = gson.fromJson(errorString, ErrorResponse::class.java)
             // use response body to get error detail
             ErrorModel(ErrorStatus.CLIENT_EEROR, response.error.status, response.error.message)
         } catch (e: Exception) {
             e.printStackTrace()
-            ErrorModel(ErrorStatus.CLIENT_EEROR)
+            ErrorModel(
+                ErrorStatus.CLIENT_EEROR,
+                resourceProvider.getString(R.string.response_badrequest_error)
+            )
         }
 
     }
