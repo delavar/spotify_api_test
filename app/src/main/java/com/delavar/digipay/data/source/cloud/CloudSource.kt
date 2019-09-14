@@ -6,6 +6,7 @@ import io.reactivex.Flowable
 
 interface CloudSource {
     fun search(
+        query: String,
         offset: Int,
         limit: Int
     ) : Flowable<SearchResponse>

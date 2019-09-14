@@ -5,5 +5,5 @@ import io.reactivex.Flowable
 import java.time.ZoneOffset
 
 interface SearchRepository {
-    fun getResult(offset: Int, limit: Int): Flowable<List<Artist>>
+    fun getResult(query: String, offset: Int, limit: Int): Flowable<List<Artist>>
 }
