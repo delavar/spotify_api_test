@@ -1,7 +1,6 @@
 package com.delavar.digipay.data.source.cloud
 
-import PaginateResponse
-import SearchResponse
+import com.delavar.digipay.data.model.SearchResponse
 import io.reactivex.Flowable
 
 interface CloudSource {

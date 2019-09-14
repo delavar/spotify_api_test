@@ -1,8 +1,7 @@
 package com.delavar.digipay.presentation.ui.search
 
-import Artist
+import com.delavar.digipay.domain.model.Artist
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.delavar.digipay.domain.response.ErrorModel
 import com.delavar.digipay.domain.usecase.SearchUseCase
 import com.delavar.digipay.presentation.ui.base.BaseViewModel

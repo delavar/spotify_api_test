@@ -1,7 +1,7 @@
 package com.delavar.digipay.data.source.cloud
 
-import SearchResponse
 import com.delavar.digipay.data.ErrorUtils
+import com.delavar.digipay.data.model.SearchResponse
 import com.delavar.digipay.data.restful.ApiService
 import io.reactivex.Flowable
 

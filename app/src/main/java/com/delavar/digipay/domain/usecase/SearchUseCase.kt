@@ -1,6 +1,6 @@
 package com.delavar.digipay.domain.usecase
 
-import Artist
+import com.delavar.digipay.domain.model.Artist
 import com.delavar.digipay.domain.DomainScheduler
 import com.delavar.digipay.domain.repository.SearchRepository
 import com.delavar.digipay.domain.response.DomainErrorException

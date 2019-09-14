@@ -1,3 +1,5 @@
+package com.delavar.digipay.domain.model
+
 import com.google.gson.annotations.SerializedName
 
 data class Image (

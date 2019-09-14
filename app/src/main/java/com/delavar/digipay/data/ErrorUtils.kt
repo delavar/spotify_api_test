@@ -1,6 +1,6 @@
 package com.delavar.digipay.data
 
-import ErrorResponse
+import com.delavar.digipay.data.model.ErrorResponse
 import com.delavar.digipay.R
 import com.delavar.digipay.domain.response.DomainErrorException
 import com.delavar.digipay.domain.response.ErrorModel

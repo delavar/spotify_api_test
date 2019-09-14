@@ -1,6 +1,6 @@
 package com.delavar.digipay.data.repository
 
-import Artist
+import com.delavar.digipay.domain.model.Artist
 import com.delavar.digipay.data.source.cloud.CloudSource
 import com.delavar.digipay.domain.repository.SearchRepository
 import io.reactivex.Flowable

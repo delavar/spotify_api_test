@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
@@ -48,6 +50,9 @@ dependencies {
     implementation appDependencies.spotifyAuth
 
     implementation appDependencies.prefKtx
+
+    implementation appDependencies.glide
+    kapt appDependencies.glideCompiler
 
     //Lifecycle
     implementation appDependencies.archLifeCycle
