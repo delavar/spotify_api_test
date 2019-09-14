@@ -9,6 +9,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class AppComponentImpl(val app: Application) : AppComponent {
+
     override val pref: SharedPreferences by lazy {
         PreferenceHelper.customPrefs(app.applicationContext,"pref")
     }
