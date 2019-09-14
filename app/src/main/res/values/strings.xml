@@ -3,4 +3,10 @@
     <string name="login_txt">لطفا وارد شوید</string>
     <string name="login_btn">ورود</string>
     <string name="login_error">عملیات لفو شد؟!</string>
+
+    <string name="response_network_error">Network Error</string>
+    <string name="response_unauthorized_error">Unauthorized Error</string>
+    <string name="response_server_error">Server Error</string>
+    <string name="response_timeout_error">Timeout Error</string>
+    <string name="response_unknown_error">Unknown Error</string>
 </resources>
