@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.delavar.digipay.databinding.ItemArtistBinding
+import com.delavar.digipay.presentation.ui.MainNavigator
 
-class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
+class SearchAdapter(val mainNavigator: MainNavigator) :
+    RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     private var items = emptyList<Artist>()
 
     fun submitList(newItems: List<Artist>) {
@@ -46,7 +48,12 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
         holder.onBind(items[position])
     }
 
-    class ViewHolder(val binding: ItemArtistBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: ItemArtistBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            itemView.setOnClickListener {
+                mainNavigator.goToDetail(binding.artist)
+            }
+        }
 
         fun onBind(artist: Artist) {
             binding.artist = artist

@@ -17,8 +17,10 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.app.SearchManager
 import android.content.Context
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
+import com.delavar.digipay.presentation.ui.MainNavigator
 import com.delavar.digipay.presentation.ui.auth.AuthActivity
 import com.delavar.digipay.presentation.utils.ViewModelScope
 import com.delavar.digipay.presentation.utils.getAppComponent
@@ -53,7 +55,7 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerView.adapter = SearchAdapter()
+        binding.recyclerView.adapter = SearchAdapter(MainNavigator(activity as AppCompatActivity))
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.viewModel = viewModel
 
